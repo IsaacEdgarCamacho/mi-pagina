@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pedro Sánchez | Sitio Profesional</title>
+
+  <meta name="description" content="Sitio profesional de Pedro Sánchez. Derecho, arquitectura, tecnología y proyectos.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #171717;
+      background: #f7f7f5;
+      line-height: 1.6;
+    }
+
+    /* =========================
+       NAVEGACIÓN
+    ========================= */
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 22px 6%;
+
+      background: rgba(247, 247, 245, 0.88);
+      backdrop-filter: blur(12px);
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: -0.5px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #171717;
+      font-size: 14px;
+      transition: opacity 0.3s;
+    }
+
+    nav a:hover {
+      opacity: 0.5;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+
+      padding: 120px 6% 70px;
+
+      background:
+        linear-gradient(
+          to right,
+          rgba(0,0,0,0.68),
+          rgba(0,0,0,0.25)
+        ),
+        url("https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=2000&q=85")
+        center/cover no-repeat;
+
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero small {
+      display: block;
+      margin-bottom: 25px;
+
+      font-size: 13px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-size: clamp(55px, 10vw, 130px);
+      line-height: 0.9;
+      letter-spacing: -6px;
+      margin-bottom: 35px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      font-size: 21px;
+      color: #eeeeee;
+    }
+
+    .scroll {
+      margin-top: 60px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* =========================
+       SECCIONES
+    ========================= */
+
+    section {
+      padding: 120px 8%;
+    }
+
+    .section-title {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 60px;
+      color: #666;
+    }
+
+    .about {
+      max-width: 1000px;
+    }
+
+    .about h2 {
+      font-size: clamp(35px, 5vw, 65px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+      font-weight: 500;
+    }
+
+    /* =========================
+       FORMACION
+    ========================= */
+
+    .timeline {
+      max-width: 1000px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 50px;
+
+      padding: 30px 0;
+
+      border-top: 1px solid #d5d5d5;
+    }
+
+    .timeline-item:last-child {
+      border-bottom: 1px solid #d5d5d5;
+    }
+
+    .year {
+      color: #777;
+      font-size: 14px;
+    }
+
+    .timeline h3 {
+      font-size: 25px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .timeline p {
+      color: #666;
+    }
+
+    /* =========================
+       EXPERIENCIA
+    ========================= */
+
+    .experience {
+      background: #e9e9e5;
+    }
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      padding: 45px;
+      background: #f7f7f5;
+
+      min-height: 230px;
+
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card span {
+      font-size: 12px;
+      color: #777;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .card h3 {
+      font-size: 28px;
+      font-weight: 500;
+      margin: 20px 0 10px;
+    }
+
+    .card p {
+      color: #666;
+    }
+
+    /* =========================
+       PROYECTOS
+    ========================= */
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .project {
+      min-height: 330px;
+      padding: 35px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      background: #171717;
+      color: white;
+
+      transition: transform 0.3s;
+    }
+
+    .project:hover {
+      transform: translateY(-8px);
+    }
+
+    .project h3 {
+      font-size: 30px;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+
+    .project p {
+      color: #bbb;
+    }
+
+    /* =========================
+       PRODUCTOS
+    ========================= */
+
+    .products {
+      background: #171717;
+      color: white;
+    }
+
+    .products .section-title {
+      color: #aaa;
+    }
+
+    .product-content {
+      max-width: 900px;
+    }
+
+    .product-content h2 {
+      font-size: clamp(40px, 6vw, 75px);
+      line-height: 1;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+
+    .product-content p {
+      max-width: 600px;
+      color: #bbb;
+      font-size: 18px;
+    }
+
+    .button {
+      display: inline-block;
+
+      margin-top: 35px;
+      padding: 15px 25px;
+
+      border: 1px solid white;
+
+      color: white;
+      text-decoration: none;
+
+      transition: all 0.3s;
+    }
+
+    .button:hover {
+      background: white;
+      color: #171717;
+    }
+
+    /* =========================
+       CONTACTO
+    ========================= */
+
+    .contact {
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .contact h2 {
+      max-width: 1000px;
+
+      font-size: clamp(45px, 7vw, 90px);
+      line-height: 0.95;
+      letter-spacing: -4px;
+      font-weight: 400;
+    }
+
+    .contact-links {
+      display: flex;
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .contact-links a {
+      color: #171717;
+      text-decoration: none;
+      border-bottom: 1px solid #171717;
+      padding-bottom: 4px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding: 30px 8%;
+
+      display: flex;
+      justify-content: space-between;
+
+      border-top: 1px solid #ddd;
+
+      font-size: 13px;
+      color: #777;
+    }
+
+    /* =========================
+       CELULAR
+    ========================= */
+
+    @media (max-width: 800px) {
+
+      nav {
+        padding: 18px 5%;
+      }
+
+      nav ul {
+        display: none;
+      }
+
+      .hero {
+        padding-left: 7%;
+        padding-right: 7%;
+      }
+
+      .hero h1 {
+        letter-spacing: -3px;
+      }
+
+      section {
+        padding: 80px 7%;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .experience-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .projects {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-links {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVEGACIÓN -->
+
+  <nav>
+
+    <div class="logo">
+      PS
+    </div>
+
+    <ul>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#formacion">Formación</a></li>
+      <li><a href="#experiencia">Experiencia</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#productos">Productos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+
+  </nav>
+
+
+  <!-- HERO -->
+
+  <header class="hero">
+
+    <div class="hero-content">
+
+      <small>Sitio profesional</small>
+
+      <h1>
+        Pedro<br>
+        Sánchez
+      </h1>
+
+      <p>
+        Derecho, arquitectura, tecnología y creación de proyectos.
+      </p>
+
+      <div class="scroll">
+        ↓ Explorar
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- SOBRE MI -->
+
+  <section id="sobre-mi">
+
+    <div class="section-title">
+      01 — Sobre mí
+    </div>
+
+    <div class="about">
+
+      <h2>
+        Un perfil multidisciplinario enfocado en transformar
+        conocimiento e ideas en proyectos concretos.
+      </h2>
+
+    </div>
+
+  </section>
+
+
+  <!-- FORMACION -->
+
+  <section id="formacion">
+
+    <div class="section-title">
+      02 — Formación
+    </div>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+
+        <div class="year">
+          Formación
+        </div>
+
+        <div>
+          <h3>Derecho</h3>
+          <p>
+            Formación jurídica y desarrollo profesional en el ámbito del Derecho.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="year">
+          Formación
+        </div>
+
+        <div>
+          <h3>Arquitectura</h3>
+          <p>
+            Formación vinculada al diseño, planificación y desarrollo de proyectos.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="year">
+          Actualidad
+        </div>
+
+        <div>
+          <h3>Tecnología</h3>
+          <p>
+            Aplicación de herramientas digitales e inteligencia artificial
+            para mejorar procesos profesionales.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- EXPERIENCIA -->
+
+  <section class="experience" id="experiencia">
+
+    <div class="section-title">
+      03 — Experiencia
+    </div>
+
+    <div class="experience-grid">
+
+      <div class="card">
+
+        <span>01</span>
+
+        <h3>Derecho</h3>
+
+        <p>
+          Análisis jurídico, gestión de expedientes,
+          investigación y elaboración de escritos.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <span>02</span>
+
+        <h3>Gestión</h3>
+
+        <p>
+          Organización y optimización de procesos
+          profesionales mediante herramientas digitales.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <span>03</span>
+
+        <h3>Arquitectura</h3>
+
+        <p>
+          Interés y experiencia interdisciplinaria
+          vinculada al diseño y desarrollo.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <span>04</span>
+
+        <h3>Tecnología</h3>
+
+        <p>
+          Creación de sistemas y herramientas
+          orientadas a resolver problemas reales.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROYECTOS -->
+
+  <section id="proyectos">
+
+    <div class="section-title">
+      04 — Proyectos
+    </div>
+
+    <div class="projects">
+
+      <div class="project">
+
+        <h3>Estudio Jurídico</h3>
+
+        <p>
+          Herramientas digitales para mejorar
+          la gestión profesional.
+        </p>
+
+      </div>
+
+
+      <div class="project">
+
+        <h3>Educación</h3>
+
+        <p>
+          Desarrollo de materiales de estudio
+          y productos educativos.
+        </p>
+
+      </div>
+
+
+      <div class="project">
+
+        <h3>Digital</h3>
+
+        <p>
+          Proyectos que combinan tecnología,
+          diseño e inteligencia artificial.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PRODUCTOS -->
+
+  <section class="products" id="productos">
+
+    <div class="section-title">
+      05 — Productos
+    </div>
+
+    <div class="product-content">
+
+      <h2>
+        Material académico
+        y recursos profesionales.
+      </h2>
+
+      <p>
+        Próximamente podrás encontrar apuntes,
+        resúmenes, infografías y otros recursos
+        desarrollados para facilitar el estudio.
+      </p>
+
+      <a href="#" class="button">
+        Ver productos →
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACTO -->
+
+  <section class="contact" id="contacto">
+
+    <div class="section-title">
+      06 — Contacto
+    </div>
+
+    <h2>
+      ¿Tenés un proyecto?
+      Hablemos.
+    </h2>
+
+    <div class="contact-links">
+
+      <a href="mailto:tuemail@email.com">
+        Email
+      </a>
+
+      <a href="#">
+        LinkedIn
+      </a>
+
+      <a href="#">
+        Instagram
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <span>
+      © 2026 Pedro Sánchez
+    </span>
+
+    <span>
+      Buenos Aires, Argentina
+    </span>
+
+  </footer>
+
+
+</body>
+</html>
