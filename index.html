@@ -3,524 +3,1046 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Pedro Sánchez</title>
+    <title>Pedro Sánchez — Abogado</title>
 
-<meta name="description"
-content="Pedro Sánchez — Abogado">
+    <meta name="description"
+          content="Pedro Sánchez — Abogado. Derecho, tecnología, inteligencia artificial y desarrollo de proyectos.">
 
-<style>
+    <style>
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+        /* =====================================================
+           RESET
+        ===================================================== */
 
-html {
-    scroll-behavior: smooth;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
 
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
+        html {
+            scroll-behavior: smooth;
+        }
 
-    background: #ffffff;
 
-    color: #151515;
+        body {
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
 
-    line-height: 1.6;
-}
+            background: #ffffff;
 
+            color: #111111;
 
-/* ==============================
-   CONTENEDOR
-============================== */
+            line-height: 1.5;
 
-.container {
+            -webkit-font-smoothing: antialiased;
+        }
 
-    width: min(1100px, 90%);
 
-    margin: auto;
-}
+        a {
+            color: inherit;
 
+            text-decoration: none;
+        }
 
-/* ==============================
-   PRESENTACIÓN
-============================== */
 
-.hero {
+        ::selection {
+            background: #111111;
 
-    min-height: 100vh;
+            color: #ffffff;
+        }
 
-    display: flex;
 
-    align-items: center;
+        /* =====================================================
+           CONTENEDOR
+        ===================================================== */
 
-    position: relative;
+        .container {
 
-    overflow: hidden;
-}
+            width: min(1180px, 90%);
 
-.hero-content {
+            margin: 0 auto;
 
-    width: 55%;
+        }
 
-    position: relative;
 
-    z-index: 2;
-}
+        /* =====================================================
+           NAVEGACIÓN
+        ===================================================== */
 
-.hero h1 {
+        header {
 
-    font-size: clamp(55px, 9vw, 120px);
+            position: fixed;
 
-    line-height: .9;
+            top: 0;
 
-    font-weight: 700;
+            left: 0;
 
-    letter-spacing: -5px;
+            width: 100%;
 
-    margin-bottom: 30px;
-}
+            z-index: 1000;
 
-.hero h2 {
+            background: rgba(255,255,255,.94);
 
-    font-size: 25px;
+            backdrop-filter: blur(10px);
 
-    font-weight: 400;
+            border-bottom: 1px solid #eeeeee;
 
-    color: #555;
+        }
 
-    margin-bottom: 20px;
-}
 
-.hero p {
+        .nav {
 
-    max-width: 500px;
+            height: 72px;
 
-    font-size: 18px;
+            display: flex;
 
-    color: #666;
-}
+            align-items: center;
 
+            justify-content: space-between;
 
-/* ==============================
-   IMAGEN
-============================== */
+        }
 
-.hero-image {
 
-    position: absolute;
+        .nav-name {
 
-    right: 0;
+            font-size: 15px;
 
-    top: 0;
+            font-weight: 600;
 
-    width: 45%;
+            letter-spacing: -.2px;
 
-    height: 100%;
+        }
 
-    background-image:
 
-        linear-gradient(
-            rgba(255,255,255,.08),
-            rgba(255,255,255,.08)
-        ),
+        .nav-links {
 
-        url("https://upload.wikimedia.org/wikipedia/commons/1/1b/Villa_Savoye%2C_Poissy%2C_France.jpg");
+            display: flex;
 
-    background-size: cover;
+            gap: 28px;
 
-    background-position: center;
+        }
 
-}
 
+        .nav-links a {
 
-/* ==============================
-   NAVEGACIÓN
-============================== */
+            font-size: 12px;
 
-.navigation {
+            color: #666666;
 
-    position: absolute;
+            transition: color .2s ease;
 
-    bottom: 40px;
+        }
 
-    left: 0;
 
-    z-index: 5;
-}
+        .nav-links a:hover {
 
-.navigation a {
+            color: #111111;
 
-    text-decoration: none;
+        }
 
-    color: #222;
 
-    margin-right: 30px;
+        /* =====================================================
+           PRESENTACIÓN
+        ===================================================== */
 
-    font-size: 13px;
+        .hero {
 
-    text-transform: uppercase;
+            min-height: 100vh;
 
-    letter-spacing: 1px;
-}
+            display: flex;
 
-.navigation a:hover {
+            align-items: center;
 
-    opacity: .5;
-}
+            padding-top: 72px;
 
+        }
 
-/* ==============================
-   SECCIONES
-============================== */
 
-section {
+        .hero-inner {
 
-    padding: 120px 0;
-}
+            width: 100%;
 
-.section-title {
+            padding: 100px 0;
 
-    font-size: 13px;
+        }
 
-    text-transform: uppercase;
 
-    letter-spacing: 3px;
+        .hero-small {
 
-    margin-bottom: 60px;
+            font-size: 13px;
 
-    color: #777;
-}
+            color: #777777;
 
+            margin-bottom: 30px;
 
-/* ==============================
-   SOBRE MI
-============================== */
+        }
 
-.about {
 
-    max-width: 850px;
-}
+        .hero h1 {
 
-.about h3 {
+            font-size: clamp(64px, 11vw, 150px);
 
-    font-size: clamp(32px, 5vw, 55px);
+            line-height: .86;
 
-    line-height: 1.1;
+            letter-spacing: -8px;
 
-    font-weight: 400;
+            font-weight: 600;
 
-    letter-spacing: -2px;
+            max-width: 1050px;
 
-    margin-bottom: 40px;
-}
+        }
 
-.about p {
 
-    font-size: 18px;
+        .hero h1 span {
 
-    color: #555;
+            color: #777777;
 
-    margin-bottom: 20px;
+        }
 
-    max-width: 750px;
-}
 
+        .hero-description {
 
-/* ==============================
-   EDUCACIÓN
-============================== */
+            margin-top: 55px;
 
-.education-item {
+            max-width: 520px;
 
-    display: grid;
+            font-size: 18px;
 
-    grid-template-columns: 180px 1fr;
+            line-height: 1.55;
 
-    gap: 50px;
+            color: #555555;
 
-    padding: 35px 0;
+        }
 
-    border-top: 1px solid #ddd;
-}
 
-.education-item:last-child {
+        .hero-bottom {
 
-    border-bottom: 1px solid #ddd;
-}
+            margin-top: 90px;
 
-.education-year {
+            display: flex;
 
-    color: #777;
+            justify-content: space-between;
 
-    font-size: 14px;
-}
+            align-items: flex-end;
 
-.education-item h3 {
+        }
 
-    font-size: 26px;
 
-    font-weight: 500;
+        .scroll {
 
-    margin-bottom: 8px;
-}
+            font-size: 11px;
 
-.education-item h4 {
+            color: #888888;
 
-    font-size: 16px;
+            text-transform: uppercase;
 
-    font-weight: 400;
+            letter-spacing: 1.5px;
 
-    color: #666;
+        }
 
-    margin-bottom: 12px;
-}
 
-.education-item p {
+        .location {
 
-    color: #777;
+            font-size: 12px;
 
-    max-width: 650px;
-}
+            color: #777777;
 
+            text-align: right;
 
-/* ==============================
-   HABILIDADES
-============================== */
+        }
 
-.skills {
 
-    background: #f6f6f4;
-}
+        /* =====================================================
+           SECCIONES
+        ===================================================== */
 
-.skill {
+        section {
 
-    margin-bottom: 35px;
-}
+            padding: 140px 0;
 
-.skill-header {
+            border-top: 1px solid #eeeeee;
 
-    display: flex;
+        }
 
-    justify-content: space-between;
 
-    margin-bottom: 10px;
+        .section-header {
 
-    font-size: 15px;
-}
+            display: grid;
 
-.skill-bar {
+            grid-template-columns: 180px 1fr;
 
-    height: 4px;
+            gap: 50px;
 
-    background: #ddd;
+            margin-bottom: 70px;
 
-    position: relative;
-}
+        }
 
-.skill-progress {
 
-    height: 100%;
+        .section-number {
 
-    background: #151515;
-}
+            font-size: 12px;
 
+            color: #999999;
 
-/* ==============================
-   EXPERIENCIA
-============================== */
+        }
 
-.experience-item {
 
-    display: grid;
+        .section-title {
 
-    grid-template-columns: 180px 1fr;
+            font-size: 13px;
 
-    gap: 50px;
+            text-transform: lowercase;
 
-    padding: 35px 0;
+            color: #777777;
 
-    border-top: 1px solid #ddd;
-}
+            letter-spacing: .5px;
 
-.experience-item:last-child {
+        }
 
-    border-bottom: 1px solid #ddd;
-}
 
-.experience-year {
+        /* =====================================================
+           SOBRE MÍ
+        ===================================================== */
 
-    color: #777;
+        .about-content {
 
-    font-size: 14px;
-}
+            max-width: 850px;
 
-.experience-item h3 {
+            margin-left: 230px;
 
-    font-size: 27px;
+        }
 
-    font-weight: 500;
 
-    margin-bottom: 7px;
-}
+        .about-main {
 
-.experience-item h4 {
+            font-size: clamp(32px, 5vw, 58px);
 
-    font-weight: 400;
+            line-height: 1.08;
 
-    color: #666;
+            letter-spacing: -2.5px;
 
-    margin-bottom: 15px;
-}
+            font-weight: 400;
 
-.experience-item p {
+            margin-bottom: 50px;
 
-    color: #666;
+        }
 
-    max-width: 700px;
-}
 
+        .about-main span {
 
-/* ==============================
-   CONTACTO
-============================== */
+            color: #888888;
 
-.contact {
+        }
 
-    min-height: 70vh;
 
-    display: flex;
+        .about-text {
 
-    align-items: center;
-}
+            max-width: 650px;
 
-.contact h2 {
+            font-size: 17px;
 
-    font-size: clamp(45px, 8vw, 95px);
+            color: #555555;
 
-    line-height: .95;
+            line-height: 1.7;
 
-    letter-spacing: -5px;
+        }
 
-    font-weight: 500;
 
-    margin-bottom: 50px;
-}
+        .about-text p {
 
-.contact a {
+            margin-bottom: 22px;
 
-    color: #151515;
+        }
 
-    text-decoration: none;
 
-    border-bottom: 1px solid #151515;
+        /* =====================================================
+           EDUCACIÓN
+        ===================================================== */
 
-    padding-bottom: 5px;
+        .timeline {
 
-    margin-right: 30px;
-}
+            margin-left: 230px;
 
+        }
 
-/* ==============================
-   FOOTER
-============================== */
 
-footer {
+        .timeline-item {
 
-    border-top: 1px solid #ddd;
+            display: grid;
 
-    padding: 30px 0;
+            grid-template-columns: 150px 1fr;
 
-    color: #777;
+            gap: 45px;
 
-    font-size: 13px;
-}
+            padding: 35px 0;
 
+            border-top: 1px solid #dddddd;
 
-/* ==============================
-   CELULAR
-============================== */
+        }
 
-@media(max-width: 800px) {
 
-    .hero {
+        .timeline-item:last-child {
 
-        min-height: 100vh;
+            border-bottom: 1px solid #dddddd;
 
-        align-items: flex-end;
+        }
 
-        padding-bottom: 100px;
-    }
 
-    .hero-content {
+        .timeline-date {
 
-        width: 100%;
+            font-size: 12px;
 
-        background: rgba(255,255,255,.88);
+            color: #888888;
 
-        padding: 30px;
-    }
+            line-height: 1.5;
 
-    .hero h1 {
+        }
 
-        font-size: 65px;
 
-        letter-spacing: -3px;
-    }
+        .timeline-content h3 {
 
-    .hero-image {
+            font-size: 25px;
 
-        width: 100%;
+            font-weight: 500;
 
-        height: 65%;
+            letter-spacing: -.5px;
 
-        opacity: .75;
-    }
+            margin-bottom: 6px;
 
-    .navigation {
+        }
 
-        left: 7%;
 
-        bottom: 25px;
-    }
+        .timeline-content h4 {
 
-    .navigation a {
+            font-size: 14px;
 
-        margin-right: 12px;
+            font-weight: 400;
 
-        font-size: 10px;
-    }
+            color: #666666;
 
-    section {
+            margin-bottom: 14px;
 
-        padding: 80px 0;
-    }
+        }
 
-    .education-item,
-    .experience-item {
 
-        grid-template-columns: 1fr;
+        .timeline-content p {
 
-        gap: 10px;
-    }
+            max-width: 650px;
 
-    .contact h2 {
+            font-size: 15px;
 
-        letter-spacing: -3px;
-    }
+            color: #777777;
 
-}
+            line-height: 1.65;
 
-</style>
+        }
+
+
+        /* =====================================================
+           HABILIDADES
+        ===================================================== */
+
+        .skills-grid {
+
+            margin-left: 230px;
+
+            max-width: 850px;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            column-gap: 80px;
+
+        }
+
+
+        .skill {
+
+            padding: 22px 0;
+
+            border-top: 1px solid #dddddd;
+
+        }
+
+
+        .skill:last-child {
+
+            border-bottom: 1px solid #dddddd;
+
+        }
+
+
+        .skill-top {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .skill-name {
+
+            font-size: 14px;
+
+        }
+
+
+        .skill-number {
+
+            font-size: 12px;
+
+            color: #888888;
+
+        }
+
+
+        .skill-line {
+
+            height: 2px;
+
+            background: #eeeeee;
+
+        }
+
+
+        .skill-progress {
+
+            height: 2px;
+
+            background: #111111;
+
+        }
+
+
+        /* =====================================================
+           EXPERIENCIA
+        ===================================================== */
+
+        .experience {
+
+            margin-left: 230px;
+
+        }
+
+
+        .experience-item {
+
+            display: grid;
+
+            grid-template-columns: 150px 1fr;
+
+            gap: 45px;
+
+            padding: 38px 0;
+
+            border-top: 1px solid #dddddd;
+
+        }
+
+
+        .experience-item:last-child {
+
+            border-bottom: 1px solid #dddddd;
+
+        }
+
+
+        .experience-date {
+
+            font-size: 12px;
+
+            color: #888888;
+
+        }
+
+
+        .experience-content h3 {
+
+            font-size: 25px;
+
+            font-weight: 500;
+
+            letter-spacing: -.5px;
+
+            margin-bottom: 6px;
+
+        }
+
+
+        .experience-content h4 {
+
+            font-size: 14px;
+
+            color: #666666;
+
+            font-weight: 400;
+
+            margin-bottom: 14px;
+
+        }
+
+
+        .experience-content p {
+
+            max-width: 700px;
+
+            font-size: 15px;
+
+            color: #777777;
+
+            line-height: 1.65;
+
+        }
+
+
+        /* =====================================================
+           PROYECTOS
+        ===================================================== */
+
+        .projects {
+
+            margin-left: 230px;
+
+        }
+
+
+        .project {
+
+            display: grid;
+
+            grid-template-columns: 150px 1fr;
+
+            gap: 45px;
+
+            padding: 38px 0;
+
+            border-top: 1px solid #dddddd;
+
+        }
+
+
+        .project:last-child {
+
+            border-bottom: 1px solid #dddddd;
+
+        }
+
+
+        .project-number {
+
+            font-size: 12px;
+
+            color: #888888;
+
+        }
+
+
+        .project-content {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 40px;
+
+        }
+
+
+        .project-content h3 {
+
+            font-size: 25px;
+
+            font-weight: 500;
+
+            margin-bottom: 7px;
+
+        }
+
+
+        .project-content p {
+
+            max-width: 650px;
+
+            font-size: 15px;
+
+            color: #777777;
+
+            line-height: 1.65;
+
+        }
+
+
+        .project-arrow {
+
+            font-size: 25px;
+
+            color: #999999;
+
+            transition: transform .2s ease;
+
+        }
+
+
+        .project:hover .project-arrow {
+
+            transform: translateX(6px);
+
+        }
+
+
+        /* =====================================================
+           CONTACTO
+        ===================================================== */
+
+        .contact {
+
+            min-height: 80vh;
+
+            display: flex;
+
+            align-items: center;
+
+        }
+
+
+        .contact-content {
+
+            margin-left: 230px;
+
+        }
+
+
+        .contact-title {
+
+            font-size: clamp(55px, 10vw, 130px);
+
+            line-height: .9;
+
+            letter-spacing: -7px;
+
+            font-weight: 500;
+
+            margin-bottom: 60px;
+
+        }
+
+
+        .contact-title span {
+
+            color: #888888;
+
+        }
+
+
+        .contact-links {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 35px;
+
+        }
+
+
+        .contact-links a {
+
+            font-size: 14px;
+
+            border-bottom: 1px solid #111111;
+
+            padding-bottom: 4px;
+
+            transition: opacity .2s ease;
+
+        }
+
+
+        .contact-links a:hover {
+
+            opacity: .5;
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+
+            border-top: 1px solid #eeeeee;
+
+            padding: 30px 0;
+
+        }
+
+
+        .footer-inner {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            font-size: 11px;
+
+            color: #888888;
+
+        }
+
+
+        /* =====================================================
+           ANIMACIONES
+        ===================================================== */
+
+        @keyframes aparecer {
+
+            from {
+
+                opacity: 0;
+
+                transform: translateY(25px);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0);
+
+            }
+
+        }
+
+
+        .hero-small,
+        .hero h1,
+        .hero-description,
+        .hero-bottom {
+
+            animation: aparecer .8s ease forwards;
+
+        }
+
+
+        .hero h1 {
+
+            animation-delay: .1s;
+
+        }
+
+
+        .hero-description {
+
+            animation-delay: .2s;
+
+        }
+
+
+        .hero-bottom {
+
+            animation-delay: .3s;
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 800px) {
+
+
+            .container {
+
+                width: 88%;
+
+            }
+
+
+            .nav {
+
+                height: 64px;
+
+            }
+
+
+            .nav-links {
+
+                gap: 13px;
+
+            }
+
+
+            .nav-links a {
+
+                font-size: 10px;
+
+            }
+
+
+            .hero {
+
+                padding-top: 64px;
+
+            }
+
+
+            .hero-inner {
+
+                padding: 80px 0;
+
+            }
+
+
+            .hero h1 {
+
+                font-size: clamp(58px, 18vw, 100px);
+
+                letter-spacing: -5px;
+
+            }
+
+
+            .hero-description {
+
+                font-size: 16px;
+
+                margin-top: 40px;
+
+            }
+
+
+            .hero-bottom {
+
+                margin-top: 70px;
+
+            }
+
+
+            section {
+
+                padding: 90px 0;
+
+            }
+
+
+            .section-header {
+
+                display: block;
+
+                margin-bottom: 45px;
+
+            }
+
+
+            .section-number {
+
+                margin-bottom: 8px;
+
+            }
+
+
+            .about-content,
+            .timeline,
+            .skills-grid,
+            .experience,
+            .projects,
+            .contact-content {
+
+                margin-left: 0;
+
+            }
+
+
+            .about-main {
+
+                font-size: 35px;
+
+                letter-spacing: -1.5px;
+
+            }
+
+
+            .timeline-item,
+            .experience-item,
+            .project {
+
+                grid-template-columns: 1fr;
+
+                gap: 12px;
+
+            }
+
+
+            .skills-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .project-content {
+
+                display: block;
+
+            }
+
+
+            .project-arrow {
+
+                display: none;
+
+            }
+
+
+            .contact-title {
+
+                font-size: 70px;
+
+                letter-spacing: -4px;
+
+            }
+
+
+            .contact-links {
+
+                gap: 20px;
+
+            }
+
+
+            .footer-inner {
+
+                display: block;
+
+            }
+
+
+            .footer-inner span {
+
+                display: block;
+
+                margin-bottom: 7px;
+
+            }
+
+        }
+
+    </style>
 
 </head>
 
@@ -528,499 +1050,802 @@ footer {
 <body>
 
 
-<!-- ===================================
-     INICIO
-=================================== -->
+    <!-- =====================================================
+         NAVEGACIÓN
+    ====================================================== -->
 
-<header class="hero">
+    <header>
 
-    <div class="hero-image"></div>
+        <div class="container nav">
 
-    <div class="container">
+            <a href="#" class="nav-name">
+                Pedro Sánchez
+            </a>
 
-        <div class="hero-content">
+            <nav class="nav-links">
 
-            <h1>
-                Pedro<br>
-                Sánchez
-            </h1>
+                <a href="#sobre-mi">
+                    sobre mí
+                </a>
 
-            <h2>
-                abogado
-            </h2>
+                <a href="#educacion">
+                    educación
+                </a>
 
-            <p>
-                Derecho, arquitectura, tecnología
-                y desarrollo de proyectos.
-            </p>
+                <a href="#habilidades">
+                    habilidades
+                </a>
+
+                <a href="#experiencia">
+                    experiencia
+                </a>
+
+                <a href="#proyectos">
+                    proyectos
+                </a>
+
+                <a href="#contacto">
+                    contacto
+                </a>
+
+            </nav>
 
         </div>
 
-    </div>
+    </header>
 
 
-    <nav class="navigation">
 
-        <div class="container">
+    <!-- =====================================================
+         INICIO
+    ====================================================== -->
 
-            <a href="#sobre-mi">
-                sobre mí
-            </a>
+    <main>
 
-            <a href="#educacion">
-                educación
-            </a>
+        <section class="hero">
 
-            <a href="#habilidades">
-                habilidades
-            </a>
+            <div class="container hero-inner">
 
-            <a href="#experiencia">
-                experiencia
-            </a>
-
-            <a href="#contacto">
-                contacto
-            </a>
-
-        </div>
-
-    </nav>
-
-</header>
+                <div class="hero-small">
+                    abogado · Buenos Aires, Argentina
+                </div>
 
 
-<!-- ===================================
-     SOBRE MI
-=================================== -->
-
-<section id="sobre-mi">
-
-    <div class="container">
-
-        <div class="section-title">
-            Sobre mí
-        </div>
-
-        <div class="about">
-
-            <h3>
-                Profesional multidisciplinario
-                interesado en el Derecho,
-                la arquitectura y la tecnología.
-            </h3>
-
-            <p>
-                Soy abogado con interés en la
-                innovación, la gestión profesional
-                y el desarrollo de nuevas herramientas
-                para resolver problemas concretos.
-            </p>
-
-            <p>
-                Mi formación y experiencia combinan
-                diferentes disciplinas, buscando
-                integrar conocimiento jurídico,
-                pensamiento proyectual y tecnología.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
+                <h1>
+                    Pedro<br>
+                    <span>Sánchez</span>
+                </h1>
 
 
-<!-- ===================================
-     EDUCACIÓN
-=================================== -->
+                <p class="hero-description">
 
-<section id="educacion">
+                    Derecho, tecnología, inteligencia artificial
+                    y desarrollo de proyectos.
 
-    <div class="container">
-
-        <div class="section-title">
-            Educación
-        </div>
-
-
-        <div class="education-item">
-
-            <div class="education-year">
-                Actualidad
-            </div>
-
-            <div>
-
-                <h3>
-                    Derecho
-                </h3>
-
-                <h4>
-                    Universidad de Buenos Aires
-                </h4>
-
-                <p>
-                    Formación jurídica y desarrollo
-                    profesional en distintas áreas
-                    del Derecho.
                 </p>
 
-            </div>
 
-        </div>
+                <div class="hero-bottom">
 
+                    <div class="scroll">
+                        ↓ scroll para explorar
+                    </div>
 
-        <div class="education-item">
+                    <div class="location">
+                        Buenos Aires<br>
+                        Argentina
+                    </div>
 
-            <div class="education-year">
-                Formación
-            </div>
-
-            <div>
-
-                <h3>
-                    Arquitectura
-                </h3>
-
-                <h4>
-                    Formación interdisciplinaria
-                </h4>
-
-                <p>
-                    Diseño, planificación,
-                    representación y desarrollo
-                    de proyectos.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="education-item">
-
-            <div class="education-year">
-                Formación
-            </div>
-
-            <div>
-
-                <h3>
-                    Tecnología
-                </h3>
-
-                <h4>
-                    Desarrollo y herramientas digitales
-                </h4>
-
-                <p>
-                    Incorporación de herramientas
-                    digitales e inteligencia artificial
-                    aplicadas a proyectos profesionales.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ===================================
-     HABILIDADES
-=================================== -->
-
-<section id="habilidades" class="skills">
-
-    <div class="container">
-
-        <div class="section-title">
-            Habilidades
-        </div>
-
-
-        <div class="skill">
-
-            <div class="skill-header">
-
-                <span>
-                    Derecho
-                </span>
-
-                <span>
-                    90%
-                </span>
-
-            </div>
-
-            <div class="skill-bar">
-
-                <div
-                    class="skill-progress"
-                    style="width:90%">
                 </div>
 
             </div>
 
-        </div>
+        </section>
 
 
-        <div class="skill">
 
-            <div class="skill-header">
+        <!-- =================================================
+             SOBRE MÍ
+        ================================================== -->
 
-                <span>
-                    Investigación
-                </span>
+        <section id="sobre-mi">
 
-                <span>
-                    90%
-                </span>
+            <div class="container">
 
-            </div>
+                <div class="section-header">
 
-            <div class="skill-bar">
+                    <div class="section-number">
+                        01
+                    </div>
 
-                <div
-                    class="skill-progress"
-                    style="width:90%">
+                    <div class="section-title">
+                        sobre mí
+                    </div>
+
+                </div>
+
+
+                <div class="about-content">
+
+                    <h2 class="about-main">
+
+                        Abogado interesado en
+                        <span>conectar el Derecho,
+                        la tecnología y el desarrollo
+                        de proyectos.</span>
+
+                    </h2>
+
+
+                    <div class="about-text">
+
+                        <p>
+                            Mi formación y mis intereses se
+                            encuentran en la intersección entre
+                            el Derecho, la arquitectura,
+                            la tecnología y la innovación.
+                        </p>
+
+                        <p>
+                            Me interesa especialmente utilizar
+                            herramientas digitales e inteligencia
+                            artificial para analizar problemas,
+                            organizar información y desarrollar
+                            nuevas soluciones profesionales.
+                        </p>
+
+                        <p>
+                            También trabajo en la creación de
+                            materiales académicos y proyectos
+                            orientados a mejorar la forma en que
+                            las personas estudian, trabajan y
+                            gestionan información.
+                        </p>
+
+                    </div>
+
                 </div>
 
             </div>
 
-        </div>
+        </section>
 
 
-        <div class="skill">
 
-            <div class="skill-header">
+        <!-- =================================================
+             EDUCACIÓN
+        ================================================== -->
 
-                <span>
-                    Gestión
-                </span>
+        <section id="educacion">
 
-                <span>
-                    85%
-                </span>
+            <div class="container">
 
-            </div>
+                <div class="section-header">
 
-            <div class="skill-bar">
+                    <div class="section-number">
+                        02
+                    </div>
 
-                <div
-                    class="skill-progress"
-                    style="width:85%">
+                    <div class="section-title">
+                        educación
+                    </div>
+
+                </div>
+
+
+                <div class="timeline">
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-date">
+                            actualidad
+                        </div>
+
+                        <div class="timeline-content">
+
+                            <h3>
+                                Derecho
+                            </h3>
+
+                            <h4>
+                                Universidad de Buenos Aires
+                            </h4>
+
+                            <p>
+                                Formación jurídica y desarrollo
+                                profesional en distintas áreas
+                                del Derecho.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-date">
+                            formación
+                        </div>
+
+                        <div class="timeline-content">
+
+                            <h3>
+                                Arquitectura
+                            </h3>
+
+                            <h4>
+                                Formación interdisciplinaria
+                            </h4>
+
+                            <p>
+                                Diseño, planificación,
+                                representación y pensamiento
+                                proyectual aplicado al desarrollo
+                                de proyectos.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-date">
+                            formación
+                        </div>
+
+                        <div class="timeline-content">
+
+                            <h3>
+                                Tecnología
+                            </h3>
+
+                            <h4>
+                                Desarrollo y herramientas digitales
+                            </h4>
+
+                            <p>
+                                Desarrollo de herramientas
+                                digitales e incorporación de
+                                inteligencia artificial en
+                                proyectos profesionales.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
                 </div>
 
             </div>
 
-        </div>
+        </section>
 
 
-        <div class="skill">
 
-            <div class="skill-header">
+        <!-- =================================================
+             HABILIDADES
+        ================================================== -->
 
-                <span>
-                    Tecnología
-                </span>
+        <section id="habilidades">
 
-                <span>
-                    80%
-                </span>
+            <div class="container">
 
-            </div>
+                <div class="section-header">
 
-            <div class="skill-bar">
+                    <div class="section-number">
+                        03
+                    </div>
 
-                <div
-                    class="skill-progress"
-                    style="width:80%">
+                    <div class="section-title">
+                        habilidades
+                    </div>
+
+                </div>
+
+
+                <div class="skills-grid">
+
+
+                    <div class="skill">
+
+                        <div class="skill-top">
+
+                            <span class="skill-name">
+                                Derecho
+                            </span>
+
+                            <span class="skill-number">
+                                90%
+                            </span>
+
+                        </div>
+
+                        <div class="skill-line">
+
+                            <div
+                                class="skill-progress"
+                                style="width:90%">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="skill">
+
+                        <div class="skill-top">
+
+                            <span class="skill-name">
+                                Investigación
+                            </span>
+
+                            <span class="skill-number">
+                                90%
+                            </span>
+
+                        </div>
+
+                        <div class="skill-line">
+
+                            <div
+                                class="skill-progress"
+                                style="width:90%">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="skill">
+
+                        <div class="skill-top">
+
+                            <span class="skill-name">
+                                Gestión
+                            </span>
+
+                            <span class="skill-number">
+                                85%
+                            </span>
+
+                        </div>
+
+                        <div class="skill-line">
+
+                            <div
+                                class="skill-progress"
+                                style="width:85%">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="skill">
+
+                        <div class="skill-top">
+
+                            <span class="skill-name">
+                                Tecnología
+                            </span>
+
+                            <span class="skill-number">
+                                80%
+                            </span>
+
+                        </div>
+
+                        <div class="skill-line">
+
+                            <div
+                                class="skill-progress"
+                                style="width:80%">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="skill">
+
+                        <div class="skill-top">
+
+                            <span class="skill-name">
+                                Arquitectura
+                            </span>
+
+                            <span class="skill-number">
+                                75%
+                            </span>
+
+                        </div>
+
+                        <div class="skill-line">
+
+                            <div
+                                class="skill-progress"
+                                style="width:75%">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="skill">
+
+                        <div class="skill-top">
+
+                            <span class="skill-name">
+                                Inteligencia artificial
+                            </span>
+
+                            <span class="skill-number">
+                                80%
+                            </span>
+
+                        </div>
+
+                        <div class="skill-line">
+
+                            <div
+                                class="skill-progress"
+                                style="width:80%">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
                 </div>
 
             </div>
 
-        </div>
+        </section>
 
 
-        <div class="skill">
 
-            <div class="skill-header">
+        <!-- =================================================
+             EXPERIENCIA
+        ================================================== -->
 
-                <span>
-                    Arquitectura
-                </span>
+        <section id="experiencia">
 
-                <span>
-                    75%
-                </span>
+            <div class="container">
 
-            </div>
+                <div class="section-header">
 
-            <div class="skill-bar">
+                    <div class="section-number">
+                        04
+                    </div>
 
-                <div
-                    class="skill-progress"
-                    style="width:75%">
+                    <div class="section-title">
+                        experiencia
+                    </div>
+
+                </div>
+
+
+                <div class="experience">
+
+
+                    <div class="experience-item">
+
+                        <div class="experience-date">
+                            actualidad
+                        </div>
+
+                        <div class="experience-content">
+
+                            <h3>
+                                Abogado
+                            </h3>
+
+                            <h4>
+                                Ejercicio profesional
+                            </h4>
+
+                            <p>
+                                Análisis jurídico, investigación,
+                                elaboración de escritos, seguimiento
+                                de expedientes y gestión de procesos
+                                profesionales.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="experience-item">
+
+                        <div class="experience-date">
+                            actualidad
+                        </div>
+
+                        <div class="experience-content">
+
+                            <h3>
+                                Proyectos digitales
+                            </h3>
+
+                            <h4>
+                                Tecnología e inteligencia artificial
+                            </h4>
+
+                            <p>
+                                Desarrollo de herramientas digitales
+                                orientadas a mejorar procesos
+                                profesionales, educativos y de
+                                gestión de información.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="experience-item">
+
+                        <div class="experience-date">
+                            proyectos
+                        </div>
+
+                        <div class="experience-content">
+
+                            <h3>
+                                Material académico
+                            </h3>
+
+                            <h4>
+                                Educación
+                            </h4>
+
+                            <p>
+                                Creación y organización de apuntes,
+                                resúmenes, mapas de estudio,
+                                infografías y recursos destinados
+                                a estudiantes.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
                 </div>
 
             </div>
 
-        </div>
-
-    </div>
-
-</section>
+        </section>
 
 
-<!-- ===================================
-     EXPERIENCIA
-=================================== -->
 
-<section id="experiencia">
+        <!-- =================================================
+             PROYECTOS
+        ================================================== -->
 
-    <div class="container">
+        <section id="proyectos">
 
-        <div class="section-title">
-            Experiencia
-        </div>
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div class="section-number">
+                        05
+                    </div>
+
+                    <div class="section-title">
+                        proyectos
+                    </div>
+
+                </div>
 
 
-        <div class="experience-item">
+                <div class="projects">
 
-            <div class="experience-year">
-                Actualidad
+
+                    <div class="project">
+
+                        <div class="project-number">
+                            01
+                        </div>
+
+                        <div class="project-content">
+
+                            <div>
+
+                                <h3>
+                                    Herramientas jurídicas
+                                </h3>
+
+                                <p>
+                                    Desarrollo de herramientas
+                                    digitales para organizar,
+                                    analizar y gestionar información
+                                    jurídica.
+                                </p>
+
+                            </div>
+
+                            <div class="project-arrow">
+                                →
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="project">
+
+                        <div class="project-number">
+                            02
+                        </div>
+
+                        <div class="project-content">
+
+                            <div>
+
+                                <h3>
+                                    Estudio + IA
+                                </h3>
+
+                                <p>
+                                    Diseño de métodos y herramientas
+                                    para transformar grandes
+                                    cantidades de información
+                                    académica en sistemas de estudio
+                                    más eficientes.
+                                </p>
+
+                            </div>
+
+                            <div class="project-arrow">
+                                →
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="project">
+
+                        <div class="project-number">
+                            03
+                        </div>
+
+                        <div class="project-content">
+
+                            <div>
+
+                                <h3>
+                                    Desarrollo de proyectos
+                                </h3>
+
+                                <p>
+                                    Investigación y desarrollo de
+                                    ideas que combinan Derecho,
+                                    tecnología, inteligencia artificial
+                                    y pensamiento proyectual.
+                                </p>
+
+                            </div>
+
+                            <div class="project-arrow">
+                                →
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
             </div>
 
-            <div>
+        </section>
 
-                <h3>
-                    Abogado
-                </h3>
 
-                <h4>
-                    Ejercicio profesional
-                </h4>
 
-                <p>
-                    Análisis jurídico, elaboración
-                    de escritos, seguimiento de
-                    expedientes y gestión de procesos
-                    profesionales.
-                </p>
+        <!-- =================================================
+             CONTACTO
+        ================================================== -->
+
+        <section id="contacto" class="contact">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div class="section-number">
+                        06
+                    </div>
+
+                    <div class="section-title">
+                        contacto
+                    </div>
+
+                </div>
+
+
+                <div class="contact-content">
+
+                    <h2 class="contact-title">
+
+                        Hablemos<span>.</span>
+
+                    </h2>
+
+
+                    <div class="contact-links">
+
+                        <a href="mailto:tuemail@email.com">
+                            email
+                        </a>
+
+                        <a href="#" target="_blank">
+                            linkedin
+                        </a>
+
+                        <a href="#" target="_blank">
+                            instagram
+                        </a>
+
+                    </div>
+
+                </div>
 
             </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div class="container footer-inner">
+
+            <span>
+                © 2026 Pedro Sánchez
+            </span>
+
+            <span>
+                abogado · Buenos Aires
+            </span>
 
         </div>
 
-
-        <div class="experience-item">
-
-            <div class="experience-year">
-                Actualidad
-            </div>
-
-            <div>
-
-                <h3>
-                    Proyectos digitales
-                </h3>
-
-                <h4>
-                    Tecnología e inteligencia artificial
-                </h4>
-
-                <p>
-                    Desarrollo de herramientas
-                    digitales orientadas a mejorar
-                    procesos profesionales y educativos.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="experience-item">
-
-            <div class="experience-year">
-                Proyectos
-            </div>
-
-            <div>
-
-                <h3>
-                    Material académico
-                </h3>
-
-                <h4>
-                    Educación
-                </h4>
-
-                <p>
-                    Creación y organización de
-                    apuntes, resúmenes, infografías
-                    y recursos para estudiantes.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ===================================
-     CONTACTO
-=================================== -->
-
-<section id="contacto" class="contact">
-
-    <div class="container">
-
-        <div class="section-title">
-            Contacto
-        </div>
-
-        <h2>
-            Hablemos.
-        </h2>
-
-        <a href="mailto:tuemail@email.com">
-            email
-        </a>
-
-        <a href="#">
-            linkedin
-        </a>
-
-        <a href="#">
-            instagram
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- ===================================
-     FOOTER
-=================================== -->
-
-<footer>
-
-    <div class="container">
-
-        © 2026 Pedro Sánchez
-
-    </div>
-
-</footer>
+    </footer>
 
 
 </body>
